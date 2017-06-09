@@ -1,0 +1,25 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "JSON POKEDEX",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshseve/pokedex.git"
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "author": "JOCELIN SEPTIMO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshseve/pokedex/issues"
+  },
+  "homepage": "https://github.com/joshseve/pokedex#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
