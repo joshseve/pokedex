@@ -14,16 +14,26 @@ var cargarPokemones=function(){
 };
 
 var mostrarPokemones=function (pokemones) {
-  var $ul=$("#listaPokemones");
-  pokemones.forEach(function (pokemon) {
-  var $li=$("<li />");
-  $li.addClass(".pokemon");
-  $li.text(pokemon.name);
-  $ul.append($li);
-  console.log($li);
-});
+  var plantillaFinal="";
+  pokemones.forEach(function(pokemon, index){
+    plantillaFinal += plantilla.replace(/__nombre__/g, pokemon.name).replace("__numero__", index+1);
+  });
+  $("#listaPokemones").html(plantillaFinal);
+
+  // var $ul=$("#listaPokemones");
+  // pokemones.forEach(function (pokemon) {
+  // var $li=$("<li />");
+  // $li.addClass(".pokemon");
+  // $li.text(pokemon.name);
+  // $ul.append($li);
+  // console.log($li);
+// });
 };
 
+var plantilla= '<div data-url="pokeapi.co/api/v2/pokemon-species/__numero__">' +
+'<img src="assets/img/__nombre__.png" alt="">' +
+'<h5>__nombre__</h5>' +
+'</div>';
 
 
 // Para cargar el documento
